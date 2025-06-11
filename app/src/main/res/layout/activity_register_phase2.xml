@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81A969"
+    tools:context=".RegisterPhase2">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"
+        app:layout_constraintWidth_percent="0.5"
+        app:srcCompat="@drawable/logo2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintVertical_bias="0.023">
+
+        <ImageView
+            android:id="@+id/imgPhase1Circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/white_circle" />
+
+        <ImageView
+            android:id="@+id/imgPhase2Circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/imgPhase1Circle"
+            app:srcCompat="@drawable/darkgreen_circle" />
+
+        <ImageView
+            android:id="@+id/imgPhase3Circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@id/imgPhase2Circle"
+            app:srcCompat="@drawable/white_circle" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewPhase2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.089">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="326dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="House No."
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <EditText
+                android:id="@+id/inputHouseNo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Street"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <EditText
+                android:id="@+id/inputStreet"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barangay *"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <Spinner
+                android:id="@+id/inputBarangay"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/border"
+                android:entries="@array/barangay_options"
+                android:prompt="@string/select_barangay"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"
+                android:textSize="8sp"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"/>
+
+            <EditText
+                android:id="@+id/inputOtherBarangay"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:enabled="false"
+                android:visibility="gone"
+                android:hint="Enter other barangay"
+                android:padding="5dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Municipality *"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <Spinner
+                android:id="@+id/inputMunicipality"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/border"
+                android:entries="@array/municipality_options"
+                android:prompt="@string/select_municipality"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"
+                android:textSize="8sp"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone No. *"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <EditText
+                android:id="@+id/inputPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:inputType="phone"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/textIdPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID Picture *"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/noteIdPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The ID picture must match all of the information you inputted."
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:id="@+id/uploadIdButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/dark_green"
+                android:text="Select ID Picture"
+                android:visibility="gone"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/idUploadStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/idPictureImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/uploadProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/green"
+        android:scaleType="fitCenter"
+        android:src="@drawable/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewPhase2"
+        app:layout_constraintVertical_bias="0.48" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

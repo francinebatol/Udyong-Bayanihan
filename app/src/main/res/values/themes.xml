@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.UdyongBayanihan" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here -->
+    </style>
+
+    <!-- App Theme -->
+    <style name="Theme.UdyongBayanihan" parent="Base.Theme.UdyongBayanihan">
+        <item name="android:windowBackground">@color/green</item>
+        <item name="materialButtonStyle">@style/Widget.UdyongBayanihan.Button</item>
+        <item name="android:statusBarColor">@color/green</item>
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="Widget.UdyongBayanihan.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

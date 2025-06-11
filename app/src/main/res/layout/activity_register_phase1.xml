@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#81A969"
+    tools:context=".RegisterPhase1">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"
+        app:layout_constraintWidth_percent="0.5"
+        app:srcCompat="@drawable/logo2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintVertical_bias="0.023">
+
+        <ImageView
+            android:id="@+id/imgPhase1Circle"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/darkgreen_circle" />
+
+        <ImageView
+            android:id="@+id/imgPhase2Circle"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/imgPhase1Circle"
+            app:srcCompat="@drawable/white_circle" />
+
+        <ImageView
+            android:id="@+id/imgPhase3Circle"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/imgPhase2Circle"
+            app:srcCompat="@drawable/white_circle" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewPhase1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.089">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="326dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name *"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <EditText
+                android:id="@+id/inputFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Middle Name"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <EditText
+                android:id="@+id/inputMiddleName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name *"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <EditText
+                android:id="@+id/inputLastName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textSize="13sp"/>
+
+            <LinearLayout
+                android:id="@+id/containerInputGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender *"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+                <Spinner
+                    android:id="@+id/genderSpinner"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/border"
+                    android:entries="@array/gender_options"
+                    android:prompt="@string/select_gender"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+                    android:textSize="8sp"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth *"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="303dp" />
+
+            <Button
+                android:id="@+id/inputDateofBirth"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:padding="0dp"
+                android:textAlignment="center"
+                android:textSize="13sp"/>
+
+            <ProgressBar
+                android:id="@+id/uploadProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/green"
+        android:scaleType="fitCenter"
+        android:src="@drawable/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewPhase1"
+        app:layout_constraintVertical_bias="0.48" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

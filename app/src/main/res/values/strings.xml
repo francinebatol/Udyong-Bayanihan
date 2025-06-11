@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">Udyong Bayanihan</string>
+
+    <string name="select_gender">Select Gender</string>
+    <string-array name="gender_options">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="select_barangay">Select Barangay</string>
+    <string-array name="barangay_options">
+        <item>Select Barangay</item>
+        <item>Arellano</item>
+        <item>Bagumbayan</item>
+        <item>Balagtas</item>
+        <item>Balut</item>
+        <item>Bantan</item>
+        <item>Bilolo</item>
+        <item>Calungusan</item>
+        <item>Camachile</item>
+        <item>Capunitan</item>
+        <item>Daang Bago</item>
+        <item>Daang Bilolo</item>
+        <item>Daang Pare</item>
+        <item>General Lim</item>
+        <item>Lati</item>
+        <item>Lusungan</item>
+        <item>Puting Buhangin</item>
+        <item>Sabatan</item>
+        <item>San Vicente</item>
+        <item>Santa Elena</item>
+        <item>Santo Domingo</item>
+        <item>Villa Angeles</item>
+        <item>Wakas</item>
+        <item>Wawa</item>
+        <item>Others</item>
+    </string-array>
+
+    <string name="select_type_of_event">Select Type of Event</string>
+    <string-array name="event_type_options">
+        <item>Select Event Type</item>
+        <item>Volunteer Activity</item>
+        <item>Seminar</item>
+    </string-array>
+
+    <string name="select_barangay2">Select Barangay</string>
+    <string-array name="barangay_options2">
+        <item>Select Barangay</item>
+        <item>Arellano</item>
+        <item>Bagumbayan</item>
+        <item>Balagtas</item>
+        <item>Balut</item>
+        <item>Bantan</item>
+        <item>Bilolo</item>
+        <item>Calungusan</item>
+        <item>Camachile</item>
+        <item>Capunitan</item>
+        <item>Daang Bago</item>
+        <item>Daang Bilolo</item>
+        <item>Daang Pare</item>
+        <item>General Lim</item>
+        <item>Lati</item>
+        <item>Lusungan</item>
+        <item>Puting Buhangin</item>
+        <item>Sabatan</item>
+        <item>San Vicente</item>
+        <item>Santa Elena</item>
+        <item>Santo Domingo</item>
+        <item>Villa Angeles</item>
+        <item>Wakas</item>
+        <item>Wawa</item>
+        <item>Others</item>
+    </string-array>
+
+    <string name="select_municipality">Select Municipality</string>
+    <string-array name="municipality_options">
+        <item>Select Municipality</item>
+        <item>Abucay</item>
+        <item>Bagac</item>
+        <item>City of Balanga</item>
+        <item>Dinalupihan</item>
+        <item>Hermosa</item>
+        <item>Limay</item>
+        <item>Mariveles</item>
+        <item>Morong</item>
+        <item>Orani</item>
+        <item>Orion</item>
+        <item>Pilar</item>
+        <item>Samal</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetDropDown">
+    <value>
+      <entry key="AdminCreatePost">
+        <State />
+      </entry>
+      <entry key="AdminEventsFeedbacks">
+        <State />
+      </entry>
+      <entry key="AdminNotification">
+        <State />
+      </entry>
+      <entry key="App">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\Frederick Batol\.android\avd\Pixel_4_API_29.ini" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2025-04-01T06:22:05.717826700Z" />
+        </State>
+      </entry>
+      <entry key="Feedback">
+        <State />
+      </entry>
+      <entry key="Home">
+        <State />
+      </entry>
+      <entry key="Messages">
+        <State />
+      </entry>
+      <entry key="RegistrationPhase2">
+        <State />
+      </entry>
+    </value>
+  </component>
+</project>

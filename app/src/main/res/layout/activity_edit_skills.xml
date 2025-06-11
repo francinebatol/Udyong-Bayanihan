@@ -1,0 +1,278 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Skills"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold" />
+
+        <!-- Skills Buttons -->
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginBottom="16dp">
+
+            <!-- Buttons for each skill -->
+            <Button
+                android:id="@+id/btnSkillDedication"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Dedication" />
+
+            <Button
+                android:id="@+id/btnSkillsPatience"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Patience" />
+
+            <Button
+                android:id="@+id/btnSkillsReliability"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Reliability" />
+
+            <Button
+                android:id="@+id/btnSkillParticipation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Participation" />
+
+            <Button
+                android:id="@+id/btnSkillDescisionMaking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Descision Making" />
+
+            <Button
+                android:id="@+id/btnSkillsCoaching"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Coaching" />
+
+            <Button
+                android:id="@+id/btnSkillsMentoring"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Mentoring" />
+
+            <Button
+                android:id="@+id/btnSkillPlanning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Planning" />
+
+            <Button
+                android:id="@+id/btnSkillTraining"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Training" />
+
+            <Button
+                android:id="@+id/btnSkillCriticalThinking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Critical Thinking" />
+
+            <Button
+                android:id="@+id/btnSkillDataGathering"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Data Gathering" />
+
+            <Button
+                android:id="@+id/btnSkillDetermination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Determination" />
+
+            <Button
+                android:id="@+id/btnSkillResearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Research" />
+
+            <Button
+                android:id="@+id/btnSkillFlexibility"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Flexibility" />
+
+            <Button
+                android:id="@+id/btnSkillAdaptability"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Adaptability" />
+
+            <Button
+                android:id="@+id/btnSkillConflictResolution"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Conflict Resolution" />
+
+            <Button
+                android:id="@+id/btnSkillResilience"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Resilience" />
+
+            <Button
+                android:id="@+id/btnSkillEmotionalIntelligence"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Emotional Intelligence" />
+
+            <Button
+                android:id="@+id/btnSkillEmpathy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Empathy" />
+
+            <Button
+                android:id="@+id/btnSkilldesign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Design" />
+
+            <Button
+                android:id="@+id/btnSkillInnovation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Innovation" />
+
+            <Button
+                android:id="@+id/btnSkillExplorationAndDiscovery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Exploration and Discovery" />
+
+            <Button
+                android:id="@+id/btnSkillVisualThinking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Visual Thinking" />
+
+            <Button
+                android:id="@+id/btnSkillMindfulness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Mindfulness" />
+
+            <Button
+                android:id="@+id/btnProcessAnalysis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Process Analysis" />
+            <Button
+                android:id="@+id/btnSkillScenarioPlanning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Scenario Planning" />
+            <Button
+                android:id="@+id/btnSkillTroubleshooting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/rounded_button"
+                android:text="Troubleshooting" />
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            android:text="Save Skills"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

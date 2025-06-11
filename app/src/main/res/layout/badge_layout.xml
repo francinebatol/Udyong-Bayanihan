@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- The base ImageButton -->
+    <ImageButton
+        android:id="@+id/imgbtnBase"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:scaleType="fitCenter" />
+
+    <!-- The badge with counter -->
+    <TextView
+        android:id="@+id/tvBadge"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@id/imgbtnBase"
+        android:layout_alignTop="@id/imgbtnBase"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="-5dp"
+        android:background="@drawable/badge_circle"
+        android:gravity="center"
+        android:padding="1dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

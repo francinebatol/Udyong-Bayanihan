@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    android:outlineAmbientShadowColor="@color/dark_green"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/textSkillName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CRITICAL THINKING"
+            android:textColor="@color/dark_green"
+            android:textSize="17sp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btnRequestJoin"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Request to Join"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

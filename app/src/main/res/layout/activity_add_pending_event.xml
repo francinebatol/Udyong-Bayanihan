@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:fitsSystemWindows="true"
+    tools:context=".AddPendingEvent">
+
+    <!-- Top header bar -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:paddingVertical="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="MY EVENTS"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <!-- Single ScrollView for the entire form -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Form container with rounded corners -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/containerPendingEventDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:background="@drawable/border9"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.95">
+
+                    <!-- Event Name Field -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerEventName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/eventNameLabelContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/inputNameOfEvent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <TextView
+                                android:id="@+id/textEventName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name of Event:"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/requiredAsteriskName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/inputNameOfEvent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_bg"
+                            android:hint="Name of Event"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/eventNameLabelContainer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.55" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Event Type Field -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerEventType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventName"
+                        app:layout_constraintWidth="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/eventTypeLabelContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/inputTypeOfEvent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <TextView
+                                android:id="@+id/textEventType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Type of Event:"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/requiredAsteriskType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/inputTypeOfEvent"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/spinner_bg"
+                            android:entries="@array/event_type_options"
+                            android:hint="Type of Event"
+                            android:inputType="text"
+                            android:paddingHorizontal="10dp"
+                            android:prompt="@string/select_type_of_event"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/eventTypeLabelContainer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.55" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Organization Field -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerEventOrganization"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventType"
+                        app:layout_constraintWidth="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/orgLabelContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/inputOrganization"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <TextView
+                                android:id="@+id/textEventOrganization"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Organization:"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/requiredAsteriskOrg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/inputOrganization"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_bg"
+                            android:hint="Organization"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/orgLabelContainer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.55" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Address Field -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerEventAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventOrganization"
+                        app:layout_constraintWidth="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/addressLabelContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/inputAddress"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <TextView
+                                android:id="@+id/textEventAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Address:"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/requiredAsteriskAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/inputAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/spinner_bg"
+                            android:entries="@array/barangay_options2"
+                            android:hint="Address"
+                            android:inputType="text"
+                            android:paddingHorizontal="10dp"
+                            android:prompt="@string/select_barangay"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/addressLabelContainer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.55" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Date Field -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerEventDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventAddress"
+                        app:layout_constraintWidth="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/dateLabelContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/inputDate"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <TextView
+                                android:id="@+id/textEventDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Date:"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/requiredAsteriskDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/inputDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_bg"
+                            android:drawableEnd="@drawable/ic_calendar"
+                            android:hint="Select Date"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dateLabelContainer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.55" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Head Coordinator Field -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerEventHeadCoordinator"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventDate"
+                        app:layout_constraintWidth="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/coordinatorLabelContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/inputHeadCoordinator"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <TextView
+                                android:id="@+id/textEventHeadCoordinator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Head Coordinator:"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/requiredAsteriskCoordinator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/inputHeadCoordinator"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_bg"
+                            android:hint="Head Coordinator"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/coordinatorLabelContainer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.55" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!-- Number of Volunteers Field -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerEventNumberOfVolunteers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventHeadCoordinator"
+                        app:layout_constraintWidth="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/volunteersLabelContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/inputVolunteersPerBarangay"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <TextView
+                                android:id="@+id/textEventNumberOfVolunteers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Number of Volunteers:"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/requiredAsteriskVolunteers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/inputVolunteersPerBarangay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_bg"
+                            android:hint="Volunteers Needed"
+                            android:inputType="number"
+                            android:padding="8dp"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/volunteersLabelContainer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.55" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Description Field -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerEventDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventNumberOfVolunteers"
+                        app:layout_constraintWidth="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/descriptionLabelContainer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toStartOf="@+id/inputCaption"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <TextView
+                                android:id="@+id/textEventDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Description:"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/requiredAsteriskDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="*"
+                                android:textColor="#FF0000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/inputCaption"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_bg"
+                            android:gravity="top|start"
+                            android:hint="Description"
+                            android:inputType="textMultiLine"
+                            android:minLines="4"
+                            android:padding="8dp"
+                            android:scrollbars="vertical"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/descriptionLabelContainer"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.55" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/containerEventImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventDescription">
+
+                        <TextView
+                            android:id="@+id/textEventImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Upload Event Image:"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/inputImage"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/circular_button_bg"
+                            android:contentDescription="Event Image"
+                            android:elevation="2dp"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@android:drawable/ic_menu_gallery" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/selectedImagesPreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/image_preview_bg"
+                            android:orientation="horizontal"
+                            android:padding="8dp" />
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/containerSkillsInterests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/containerEventImage">
+
+                        <TextView
+                            android:id="@+id/textChooseSkills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Choose Skills to Require"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- Skills container without a fixed height -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/containerCommunicationSkills"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/skills_container_bg"
+                            android:padding="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textChooseSkills">
+
+                            <!-- Remove the inner ScrollView and place LinearLayout directly -->
+                            <LinearLayout
+                                android:id="@+id/linearLayoutSkills"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <!-- Communication Skills -->
+                                <TextView
+                                    android:id="@+id/textCheckboxCommunication"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="4dp"
+                                    android:text="Communication"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxCollaboration"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Collaboration"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxDedication"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Dedication"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxPatience"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Patience"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxReliability"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Reliability"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxParticipation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Participation"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textCheckboxLeadership"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="4dp"
+                                    android:text="Leadership"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxDecisionsMaking"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Decision Making"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxCoaching"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Coaching"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxMentoring"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Mentoring"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxPlanning"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Planning"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxTraining"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Training"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textCheckboxProblemSolving"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="4dp"
+                                    android:text="Problem Solving"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxCriticalThinking"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Critical Thinking"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxDataGathering"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Data Gathering"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxDetermination"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Determination"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxResearch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Research"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxFlexibility"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Flexibility"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textCheckboxPersonal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="4dp"
+                                    android:text="Personal"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxAdaptability"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Adaptability"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxConflictResolution"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Conflict Resolution"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxResilience"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Resilience"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxEmotionalIntelligence"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Emotional Intelligence"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxEmpathy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Empathy"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textCheckboxCreativity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="4dp"
+                                    android:text="Creativity"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxBrainstorming"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Brainstorming"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxDesign"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Design"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxInnovation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Innovation"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxExplorationAndDiscovery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Exploration and Discovery"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxVisualThinking"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Visual Thinking"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textCheckboxAnalytical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="4dp"
+                                    android:text="Analytical"
+                                    android:textColor="@color/dark_green"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxBenchmarking"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Benchmarking"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxMindfulness"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Mindfulness"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxProcessAnalysis"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Process Analysis"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxScenarioPlanning"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Scenario Planning"
+                                    android:textSize="13sp" />
+
+                                <CheckBox
+                                    android:id="@+id/checkboxTroubleshooting"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:text="Troubleshooting"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Spacer at the bottom to ensure proper padding -->
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/containerSkillsInterests" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Button container positioned at the bottom -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/buttonContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/containerPendingEventDetails"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintWidth_percent="0.6">
+
+                    <Button
+                        android:id="@+id/addEvent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/dark_green"
+                        android:text="Add Event"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ProgressBar
+                        android:id="@+id/loadingProgressBar"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

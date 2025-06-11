@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminJoinedUsersDetails">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participant's Information"
+            android:textSize="18sp"
+            android:background="@drawable/border10"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_green"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/imgParticipantJoined"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/userParticipantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgParticipantJoined"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textParticipantAge"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Age:"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/userParticipantAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textParticipantAge"
+                    android:text="21"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textParticipantGender"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gender:"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/userParticipantGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textParticipantGender"
+                    android:text="Female"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textParticipantBarangay"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Barangay:"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/userParticipantBarangay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textParticipantBarangay"
+                    android:text="Bagumbayan"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textParticipantMunicipality"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Municipality:"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/userParticipantMunicipality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textParticipantMunicipality"
+                    android:text="Orion"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textParticipantSkills"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Skills:"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/userParticipantSkills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textParticipantSkills"
+                    android:text="skills...."
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

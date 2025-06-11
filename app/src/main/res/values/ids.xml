@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imgbtnBase" type="id" />
+    <item name="tvBadge" type="id" />
+    <item name="notification_badge" type="id" />
+</resources>

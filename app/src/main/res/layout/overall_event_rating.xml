@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overall Event Success Rating"
+            android:textSize="16sp"
+            android:textColor="@color/dark_green"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/overallRatingText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Excellent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/positive_green" />
+
+            <TextView
+                android:id="@+id/overallRatingPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="95.8%"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/positive_green"
+                android:layout_marginEnd="16dp" />
+
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/overallRatingStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:rating="4.5"
+            android:progressTint="@color/gold"
+            android:secondaryProgressTint="@color/gold"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:isIndicator="true"
+            android:scaleX="1"
+            android:scaleY="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Based on feedback from all volunteers"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:gravity="center" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

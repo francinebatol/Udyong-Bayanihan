@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgUserPost"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/user2" />
+
+                <TextView
+                    android:id="@+id/adminOrganization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@id/imgUserPost"
+                    android:text="Organization" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/adminNameOfEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Event Title"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/adminTypeOfEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event Type"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/adminDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textSize="13sp"
+                    android:layout_toRightOf="@+id/textDate"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/adminAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textSize="13sp"
+                    android:layout_toRightOf="@+id/textAddress"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textEventHeadCoordinator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Head Coordinator:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/adminHeadCoordinator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Head Coordinator"
+                    android:textSize="13sp"
+                    android:layout_toRightOf="@+id/textEventHeadCoordinator"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textSkills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skills:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/adminSkills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skills"
+                    android:textSize="13sp"
+                    android:layout_toRightOf="@+id/textSkills"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textVolunteersNeeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volunteers Needed:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/adminVolunteersNeeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="13sp"
+                    android:layout_toRightOf="@+id/textVolunteersNeeded"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caption:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/adminCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caption"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textParticipantsJoined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Participants joined:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/adminParticipantsJoined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="13sp"
+                    android:layout_toRightOf="@+id/textParticipantsJoined"/>
+            </RelativeLayout>
+
+            <!-- New RecyclerView for multiple images -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/adminImagesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/event_image_item"
+                tools:itemCount="3"
+                tools:visibility="visible"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="#DDDDDD" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/containerSeeJoinedUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true">
+
+                    <Button
+                        android:id="@+id/seeJoinedUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="See Participants"
+                        android:textColor="@color/dark_green"
+                        android:textSize="15sp"
+                        android:background="@android:color/transparent"/>
+
+                    <ImageButton
+                        android:id="@+id/imgbtnShare"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/share"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/white"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/postFeedbackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Post Feedback"
+            android:textColor="@color/dark_green"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textChooseGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose where you want to share the event."
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/checkboxShareContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCheckboxShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
